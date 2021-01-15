@@ -26,13 +26,12 @@ function Card(){
     let a = isRevealed? <Answer />: null;
     let b = isRevealed? <Buttons />: null;
 
-    function Reveal(){
-        revealAnswer(prevState => prevState = true);
+    function ToggleReveal(){
+        revealAnswer(prevState => prevState = !prevState);
     }
-
     return (
         <>
-        <div className="cardContainer" onClick={Reveal}>
+        <div className="cardContainer" onClick={ToggleReveal}>
             <h1 className="questionStyle">This is a question</h1>
             {a}
         </div>
