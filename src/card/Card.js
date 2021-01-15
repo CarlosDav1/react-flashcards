@@ -10,25 +10,26 @@ function Answer(){
     );
 }
 
-function Buttons(){
-    return(
-        <>
-            <div className="buttonContainer">
-                <button className="correct">O</button>
-                <button className="wrong">X</button>
-            </div>
-        </>
-    );
-}
+function Button(props){return <button onClick={props.toggleEvent}>{props.correctOrNo}</button>;}
 
 function Card(){
     let [isRevealed, revealAnswer] = useState(false);
-    let a = isRevealed? <Answer />: null;
-    let b = isRevealed? <Buttons />: null;
-
+    
     function ToggleReveal(){
         revealAnswer(prevState => prevState = !prevState);
     }
+
+    let a = isRevealed? <Answer />: null;
+    let b = isRevealed? 
+        <>
+            <div className="buttonContainer">
+                <Button correctOrNo="X" toggleEvent={ToggleReveal}/>
+                <Button correctOrNo="O" toggleEvent={ToggleReveal}/>
+            </div>
+        </>
+        : null;
+
+    
     return (
         <>
         <div className="cardContainer" onClick={ToggleReveal}>
