@@ -1,0 +1,30 @@
+.deckContainer {
+  border: 1px solid #00000040;
+  width: 13rem;
+  height: 17rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.allDecks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.numberOfCards {
+  color: #00000040;
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  margin: 2rem 0;
+}
+/*# sourceMappingURL=deckComponent.css.map */
