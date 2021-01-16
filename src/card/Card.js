@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './card.css'
-import deckDemo from '../deck/deckDemo.json' 
+import { Link } from 'react-router-dom'
 
 function Answer(props){
     return(
@@ -35,18 +35,18 @@ function MainComp(props){
     );
 }
 
-function GoBack(){
+function GoBack(props){
     return(
         <>
             <h1>Congratulations! You Finished the deck</h1>
             <p>do you want to retry or do wanna go back?</p>
             <button>Retry</button>
-            <button>Go Back</button>
+            <button onClick={props.finish}>Go Back</button>
         </>
     );
 }
 
-function Card(){
+function Card(props){
     let [isRevealed, revealAnswer] = useState(false);
     let [currentQuestion, setQuestion] = useState('');
     let [currentAnswer, setAnswer] = useState('');
@@ -58,15 +58,15 @@ function Card(){
     useEffect(() => {NextQuestion(true);}, [])
 
     function NextQuestion(isFirst){
-        setQuestion(currentQuestion = deckDemo["questions"][count]);
-        setAnswer(currentAnswer = deckDemo["answers"][count]);
+        setQuestion(currentQuestion = props.deck.questions[count]);
+        setAnswer(currentAnswer = props.deck.answers[count]);
         setCount(prevState => prevState + 1);
         
         if(!isFirst){revealAnswer(prevState => prevState = !prevState)}
     }
 
-    return count == deckDemo["questions"].length + 1?
-        <GoBack />
+    return count == props.deck.questions.length + 1?
+        <GoBack finish={props.finished}/>
         :<MainComp reveal={() => revealAnswer(true)} question={currentQuestion} answer={answer} buttons={buttonContainer}/>; 
 }
 

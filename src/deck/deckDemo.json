@@ -1,4 +1,6 @@
 {
+    "Name": "Demo Deck",
+    "Description": "This is a deck used for testing",
     "questions": ["is this the first question", "second question"],
     "answers": ["this is the first answer", "this is the second answer"]
 }
