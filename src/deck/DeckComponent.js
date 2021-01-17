@@ -11,11 +11,9 @@ function DeckComponent(){
 
     function changeDeck(props){
         setDeck(props);
-        console.log(props);
     }
 
     function setDeckNull(){
-        console.log('working');
         setDeck(null);
     }
 
@@ -39,10 +37,6 @@ function DeckComponent(){
 
     return (
         <>
-        {/*<Router>
-            <Route path="/" exact component={DeckDisplay} />
-        </ Router>*/}
-        
         {displayedComponent}
         </>
     );

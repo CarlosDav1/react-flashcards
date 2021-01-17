@@ -38,10 +38,9 @@ function MainComp(props){
 function GoBack(props){
     return(
         <>
-            <h1>Congratulations! You Finished the deck</h1>
-            <p>do you want to retry or do wanna go back?</p>
-            <button>Retry</button>
-            <button onClick={props.finish}>Go Back</button>
+            <h1>Congratulations! You Finished the deck.</h1>
+            <p>Let's go back.</p>
+            <button onClick={props.finish}>Go Back.</button>
         </>
     );
 }
@@ -56,16 +55,24 @@ function Card(props){
     let buttonContainer = isRevealed? <ButtonDiv nqFunc={() => NextQuestion(false)}/> : null;
 
     useEffect(() => {NextQuestion(true);}, [])
+    
+    function retryfunc(){
+        setCount(0);
+        setQuestion(currentQuestion = props.deck.questions[count]);
+        console.log(props.deck.questions[count] + " :" + count)
+        setAnswer(currentAnswer = props.deck.answers[count]);
+    }
 
     function NextQuestion(isFirst){
         setQuestion(currentQuestion = props.deck.questions[count]);
+        console.log(props.deck.questions[count] + " :" + count)
         setAnswer(currentAnswer = props.deck.answers[count]);
         setCount(prevState => prevState + 1);
         
         if(!isFirst){revealAnswer(prevState => prevState = !prevState)}
     }
 
-    return count == props.deck.questions.length + 1?
+    return count >= props.deck.questions.length + 1?
         <GoBack finish={props.finished}/>
         :<MainComp reveal={() => revealAnswer(true)} question={currentQuestion} answer={answer} buttons={buttonContainer}/>; 
 }
