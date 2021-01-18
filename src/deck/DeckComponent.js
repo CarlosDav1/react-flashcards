@@ -22,8 +22,8 @@ function DeckComponent(){
             return(
                 <div className="deckContainer" onClick={() => changeDeck(props.deck)}>
                     <h1>{props.deck.Name}</h1>
-                    <p className="description">{props.deck.Description}Place</p>
-                    <p className="numberOfCards">{props.deck.questions.length.toString()}2</p>
+                    <p className="description">{props.deck.Description}</p>
+                    <p className="numberOfCards">{props.deck.cards.length.toString()}</p>
                 </div>
             );
         }
