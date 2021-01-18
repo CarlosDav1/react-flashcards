@@ -51,13 +51,14 @@ function Card(props){
     let [currentQuestion, setQuestion] = useState('');
     let [currentAnswer, setAnswer] = useState('');
     let [end, setEnd] = useState(false);
-    let [original, setOriginal] = useState(props.deck.cards.map(num => num));
+    let [original, setOriginal] = useState([]);
     
     let answer = isRevealed? <Answer ans={currentAnswer}/>: null;
     let buttonContainer = isRevealed? <ButtonDiv correct={() => Correct()} wrong={() => Wrong()}/> : null;
 
-    useEffect(() => {
-        setOriginal(prev => prev.sort(() => Math.random() - 0.5));
+    useEffect(async () => {
+        original = await ((props.deck.cards.map(num => num)).sort(() => Math.random() - 0.5));
+        setOriginal(original);
         NextQuestion();
     }, [])
 

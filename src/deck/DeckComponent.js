@@ -4,6 +4,7 @@ import './deckComponent.css';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
 import Card from '../card/Card'
+import plus from './plus.png'
 
 function DeckComponent(){
     let [chosenDeck, setDeck] = useState(null);
@@ -27,10 +28,22 @@ function DeckComponent(){
                 </div>
             );
         }
+
+        function CreateDeck(){
+            return(
+                <div className="newDeck deckContainer">
+                    <div className="newDeckContents">
+                        <img className="plus" src={plus}></img>
+                        <p>Create New Deck</p>
+                    </div>
+                </div>
+            );
+        }
     
         return (
             <div className="allDecks">
                 <OneDeck deck={demo}/>
+                <CreateDeck />
             </div>
         );
     }

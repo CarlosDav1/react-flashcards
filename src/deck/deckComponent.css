@@ -27,4 +27,20 @@
   bottom: 0;
   margin: 2rem 0;
 }
+
+.newDeckContents {
+  text-align: center;
+  font-style: italic;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.newDeckContents .plus {
+  height: 3rem;
+  width: 3rem;
+  opacity: 0.75;
+}
 /*# sourceMappingURL=deckComponent.css.map */
