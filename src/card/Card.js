@@ -51,7 +51,6 @@ function Card(props){
     let [currentQuestion, setQuestion] = useState('');
     let [currentAnswer, setAnswer] = useState('');
     let [end, setEnd] = useState(false);
-
     let [original, setOriginal] = useState(props.deck.cards.map(num => num));
     
     let answer = isRevealed? <Answer ans={currentAnswer}/>: null;
@@ -59,33 +58,36 @@ function Card(props){
 
     useEffect(() => {
         setOriginal(prev => prev.sort(() => Math.random() - 0.5));
-        NextQuestion(true);
+        NextQuestion();
     }, [])
 
     function Correct(){
        original.shift();
        setOriginal(original);
+       revealAnswer(false);
 
-        if (!original.length == 0){
-            NextQuestion(false);
-        }
+        if (!original.length == 0){NextQuestion();}
         else{setEnd(true)}
     }
 
     function Wrong(){
-        
+        original.push(original[0]);
+        original.shift();
+
+        setOriginal(original);
+        NextQuestion();
+        revealAnswer(false);
     }
 
     async function Retry(){
         original = await ((props.deck.cards.map(num => num)).sort(() => Math.random() - 0.5));
         setOriginal(original);
-        NextQuestion(false);
+        NextQuestion();
         setEnd(false);
+        revealAnswer(false);
     }
 
-    function NextQuestion(isFirst){
-        if(!isFirst){revealAnswer(prevState => prevState = !prevState)}
-
+    function NextQuestion(){
         setQuestion(() => original[0][0]);
         setAnswer(() => original[0][1]); 
     }
