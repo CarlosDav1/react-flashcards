@@ -31,12 +31,14 @@ function DeckComponent(){
 
         function CreateDeck(){
             return(
-                <div className="newDeck deckContainer">
-                    <div className="newDeckContents">
-                        <img className="plus" src={plus}></img>
-                        <p>Create New Deck</p>
+                <Link to="/create">
+                    <div className="newDeck deckContainer">
+                        <div className="newDeckContents">
+                            <img className="plus" src={plus}></img>
+                            <p>Create New Deck</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
             );
         }
     

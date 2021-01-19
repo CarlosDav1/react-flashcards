@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+.cardContainer:hover {
+  cursor: pointer;
+}
+
 .divisionLine {
   width: 50%;
   height: 1px;
@@ -37,5 +41,9 @@
   border-radius: 5rem;
   border-style: none;
   outline: none;
+}
+
+.buttonContainer button:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=card.css.map */

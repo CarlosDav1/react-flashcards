@@ -6,9 +6,10 @@
     margin: 1rem;
     padding: 2rem;
     position: relative;
-
     
-
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .allDecks{

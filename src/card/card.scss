@@ -5,6 +5,10 @@
     position: relative;
     margin: 5rem auto;
     text-align: center;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .divisionLine{
@@ -31,5 +35,9 @@
         border-radius: 5rem;
         border-style: none;
         outline: none;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
