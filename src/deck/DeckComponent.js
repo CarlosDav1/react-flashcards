@@ -1,54 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import demo from './deckDemo.json';
 import './deckComponent.css';
-import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
 import Card from '../card/Card'
-import plus from './plus.png'
+import OneDeck from './OneDeck'
+import CreateDeck from './CreateDeck'
+
+function DeckDisplay(props){
+    let savedDecks = localStorage.getItem("AllDecksTesting") != null? localStorage.getItem("AllDecksTesting"): JSON.stringify({decks: []});
+    let decksToObjects = JSON.parse(savedDecks);
+    let change = props.changeDeck;
+
+    return (
+        <div className="allDecks">
+            <OneDeck deck={demo} change={change}/>
+            {decksToObjects.decks.map(prop => <OneDeck key={prop.Name} deck={prop} change={change}/>)}
+            <CreateDeck />
+        </div>
+    );
+}
 
 function DeckComponent(){
     let [chosenDeck, setDeck] = useState(null);
-    let displayedComponent = chosenDeck === null? <DeckDisplay/> : <Card deck={chosenDeck} finished={setDeckNull}/>;
-
-    function changeDeck(props){
-        setDeck(props);
-    }
-
-    function setDeckNull(){
-        setDeck(null);
-    }
-
-    function DeckDisplay(){
-        function OneDeck(props){
-            return(
-                <div className="deckContainer" onClick={() => changeDeck(props.deck)}>
-                    <h1>{props.deck.Name}</h1>
-                    <p className="description">{props.deck.Description}</p>
-                    <p className="numberOfCards">{props.deck.cards.length.toString()}</p>
-                </div>
-            );
-        }
-
-        function CreateDeck(){
-            return(
-                <Link to="/create">
-                    <div className="newDeck deckContainer">
-                        <div className="newDeckContents">
-                            <img className="plus" src={plus}></img>
-                            <p>Create New Deck</p>
-                        </div>
-                    </div>
-                </Link>
-            );
-        }
-    
-        return (
-            <div className="allDecks">
-                <OneDeck deck={demo}/>
-                <CreateDeck />
-            </div>
-        );
-    }
+    let displayedComponent = 
+        chosenDeck === null? 
+        <DeckDisplay changeDeck={setDeck}/>:
+        <Card deck={chosenDeck} finished={() => setDeck(null)}/>;
 
     return (
         <>
