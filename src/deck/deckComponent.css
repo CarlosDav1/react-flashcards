@@ -12,6 +12,25 @@
   cursor: pointer;
 }
 
+.deckContainer .clickArea {
+  position: absolute;
+  height: 75%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.deckContainer .buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+}
+
+.deckContainer .edit {
+  margin: 0 1rem;
+}
+
 .allDecks {
   display: -webkit-box;
   display: -ms-flexbox;

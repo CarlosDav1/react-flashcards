@@ -21,9 +21,8 @@ function DeckCreation(){
         <textarea className="question" placeholder="Question" value={question} onChange={handleInputQuestion}></textarea>
         <div className="divisionLine"></div>
         <textarea className="answer" placeholder="Answer" value={answer} onChange={handleInputAnswer}></textarea>
-
         <SavingButtons question={question} answer={answer} createCard={createCard} saveDeck={saveDeck}/>
-    </>
+    </> 
 
     function createCard(props){
         cardsArray.unshift(props);
@@ -39,7 +38,8 @@ function DeckCreation(){
     }
 
     function saveDeck(){
-        let savedDecks = localStorage.getItem("AllDecksTesting") != null? localStorage.getItem("AllDecksTesting"): JSON.stringify({decks: []});
+        let savedDecks = localStorage.getItem("AllDecksTesting");
+
         let decksToObjects = JSON.parse(savedDecks);
         let newDeck = {Name: nameAndDescription[0], Description: nameAndDescription[1], cards: cardsArray};
         
