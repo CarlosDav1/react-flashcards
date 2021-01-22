@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CardsCreated from '../deckCreation/CardsCreated'
+import { Link } from 'react-router-dom'
 
 function DeckEdit(props){
 
@@ -20,8 +21,8 @@ function DeckEdit(props){
             <CardsCreated list={deckEdit} deleteCard={deleteCard}/>
 
             <div>
-                <button>Discard Changes</button>
-                <button>Save</button>
+                <button onClick={() => props.goBack(null)}><Link to="/">Discard Changes</Link></button>
+                <button onClick={() => props.goBack(null)}><Link to="/">Save</Link></button>
             </div>
         </>
     );

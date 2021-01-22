@@ -18,7 +18,7 @@ function App() {
             <Route path="/" exact><DeckDisplay changeDeck={setDeck}/></Route>
             <Route path="/card"><Card deck={deck} finished={setDeck}/></Route>
             <Route path="/create" component={DeckCreation}/>
-            <Route path="/edit" ><DeckEdit test="ok" deckToEdit={deck}/></Route>
+            <Route path="/edit" ><DeckEdit goBack={setDeck} deckToEdit={deck}/></Route>
           </Router>
       </div>
   );
