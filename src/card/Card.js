@@ -41,7 +41,7 @@ function GoBack(props){
             <h1>Congratulations! You Finished the deck</h1>
             <p>Do you want to retry or do you want to go back?</p>
             <button onClick={props.retry}>Retry</button>
-            <button onClick={props.finish}>Go Back</button>
+            <Link to="/"><button onClick={props.finish}>Go Back</button></Link>
         </>
     );
 }
@@ -93,7 +93,7 @@ function Card(props){
         setAnswer(() => original[0][1]); 
     }
 
-    return end? <GoBack finish={props.finished} retry={Retry}/>:
+    return end? <GoBack finish={() => props.finished(null)} retry={Retry}/>:
     <MainComp reveal={() => revealAnswer(true)} question={currentQuestion} answer={answer} buttons={buttonContainer}/>;
 }
 
