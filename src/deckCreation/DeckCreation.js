@@ -48,10 +48,17 @@ function DeckCreation(){
         localStorage.setItem("AllDecksTesting", allDecks);
     }
 
+    function EditCard(question, answer, index){
+        let cardToEdit = [question, answer, index];
+        questionValue(cardToEdit[0]);
+        answerValue(cardToEdit[1]);
+        deleteCard(cardToEdit[2]);
+    }
+
     return(
         <>
             <div className="mainContainer">{mainComponent}</div>
-            <CardsCreated list={cardsArray} deleteCard={deleteCard}/>
+            <CardsCreated list={cardsArray} deleteCard={deleteCard} editCard={EditCard}/>
         </>
     );
 }

@@ -5,11 +5,21 @@ import './deckComponent.css';
 import { Link } from 'react-router-dom';
 
 function OneDeck(props){
+    let isEmpty = props.deck.cards.length == 0? "/" : "/card";
 
     return(
         <div className="deckContainer">
-            <Link to="/card">
-            <div className="clickArea" onClick={() => props.change(props.deck)}></div>
+
+            <Link to={isEmpty}>
+                <div className="clickArea" onClick={() => {
+                        
+                        if(props.deck.cards.length == 0){alert("This deck is empty")}
+                        else{
+                            props.change(props.deck);
+                        }
+
+                    }}>
+                </div>
             </Link>
             <h1>{props.deck.Name}</h1>
             <p className="description">{props.deck.Description}</p>

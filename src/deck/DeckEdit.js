@@ -61,7 +61,6 @@ function DeckEdit(props){
         cardToEdit = [question, answer, index];
         setCardToEdit(cardToEdit);
         deleteCard(index);
-        console.log(cardToEdit);
     }
 
     return (

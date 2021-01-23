@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import demo from './deckDemo.json';
 import './deckComponent.css';
 import OneDeck from './OneDeck'
 import CreateDeck from './CreateDeck'
 
 function DeckDisplay(props){
-    if(localStorage.getItem("AllDecksTesting") == null){localStorage.setItem("AllDecksTesting", JSON.stringify({decks: []}))}
+    if(localStorage.getItem("AllDecksTesting") == null){localStorage.setItem("AllDecksTesting", JSON.stringify(
+        {decks: [{
+            Name: "Demo Deck",
+            Description: "This is a deck used for demonstration",
+            cards: [
+                ["First Question", "First Answer"],
+                ["Second Question", "Second Answer"]
+                ]
+            }]
+        }
+    ))}
     
     let decksObject = JSON.parse(localStorage.getItem("AllDecksTesting"));
     let [decksToObjects, setDecks] = useState(decksObject.decks);
@@ -25,7 +34,6 @@ function DeckDisplay(props){
 
     return (
         <div className="allDecks">
-            <OneDeck deck={demo} change={props.changeDeck}/>
             {creatingComponents}
             <CreateDeck />
         </div>

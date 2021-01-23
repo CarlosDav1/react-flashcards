@@ -11,7 +11,6 @@ import DeckDisplay from './deck/DeckDisplay'
 function App() {
   let [deck, setDeck] = useState(null);
   let [deckIndexForEdit, setIndex] = useState(0);
-  console.log(deck);
 
   return (
       <div className="parentContainer">
