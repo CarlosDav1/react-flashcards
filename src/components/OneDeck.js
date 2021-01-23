@@ -1,7 +1,7 @@
 import React from 'react';
-import trash from '../deckCreation/delete.png';
-import edit from './edit.png';
-import './deckComponent.css';
+import trash from '../icons/delete.png';
+import edit from '../icons/edit.png';
+import '../styles/deckComponent.css';
 import { Link } from 'react-router-dom';
 
 function OneDeck(props){

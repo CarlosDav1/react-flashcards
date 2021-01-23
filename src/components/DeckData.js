@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './creation.css';
+import '../styles/creation.css';
 import '../index.css';
 
 function DeckData(props){

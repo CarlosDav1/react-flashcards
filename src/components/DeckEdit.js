@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CardsCreated from '../deckCreation/CardsCreated'
+import CardsCreated from './CardsCreated'
 import { Link } from 'react-router-dom'
 
 function CardForm(props){

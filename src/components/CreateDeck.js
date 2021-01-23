@@ -1,7 +1,7 @@
 import React from 'react';
-import './deckComponent.css';
+import '../styles/deckComponent.css';
 import { Link } from 'react-router-dom';
-import plus from './plus.png'
+import plus from '../icons/plus.png'
 
 function CreateDeck(){
     return(

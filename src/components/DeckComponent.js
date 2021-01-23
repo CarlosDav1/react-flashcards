@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './deckComponent.css';
-import Card from '../card/Card'
+import '../styles/deckComponent.css';
+import Card from './Card'
 import DeckDisplay from './DeckDisplay'
 
 function DeckComponent(){

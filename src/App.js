@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
-import DeckCreation from './deckCreation/DeckCreation'
+import DeckCreation from './components/DeckCreation'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import DeckEdit from './deck/DeckEdit'
+import DeckEdit from './components/DeckEdit'
 
-import './deck/deckComponent.css';
-import Card from './card/Card'
-import DeckDisplay from './deck/DeckDisplay'
+import './styles/deckComponent.css';
+import Card from './components/Card'
+import DeckDisplay from './components/DeckDisplay'
 
 function App() {
   let [deck, setDeck] = useState(null);

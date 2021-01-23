@@ -1,8 +1,8 @@
 import React from 'react';
-import './creation.css';
+import '../styles/creation.css';
 import '../index.css';
-import trash from './delete.png'
-import edit from '../deck/edit.png'
+import trash from '../icons/delete.png'
+import edit from '../icons/edit.png'
 
 function CardsCreated(props){
     let cardslist = props.list.map((i, ind) => 

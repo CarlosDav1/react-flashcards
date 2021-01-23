@@ -1,5 +1,5 @@
 import React from 'react';
-import './creation.css';
+import '../styles/creation.css';
 import '../index.css';
 import { Link } from 'react-router-dom';
 
