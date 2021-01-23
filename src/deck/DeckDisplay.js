@@ -10,7 +10,7 @@ function DeckDisplay(props){
     let decksObject = JSON.parse(localStorage.getItem("AllDecksTesting"));
     let [decksToObjects, setDecks] = useState(decksObject.decks);
     let creatingComponents = decksToObjects.length == 0? null
-    :decksToObjects.map((prop, ind) => <OneDeck key={prop.Name} deck={prop} change={props.changeDeck} delete={deleteDeck} ind={ind}/>)    
+    :decksToObjects.map((prop, ind) => <OneDeck key={prop.Name} deck={prop} change={props.changeDeck} delete={deleteDeck} ind={ind} setIndex={props.setIndex}/>)    
 
     function deleteDeck(index){
         let copyArray = decksToObjects.map(i => i);

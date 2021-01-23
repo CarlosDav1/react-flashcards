@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 function OneDeck(props){
 
-
     return(
         <div className="deckContainer">
             <Link to="/card">
@@ -16,16 +15,13 @@ function OneDeck(props){
             <p className="description">{props.deck.Description}</p>
             <p className="numberOfCards">{props.deck.cards.length.toString()}</p>
             <div className="buttons">
-
-
-                <button className="edit" onClick={() => props.change(props.deck)}>
+                <button className="edit" onClick={() => {props.change(props.deck); props.setIndex(props.ind)}}>
                     <Link to="/edit">
                         <img src={edit}/>
                     </Link>
                 </button>
-
-
                 <button className="delete" onClick={() => props.delete(props.ind)}><img src={trash}/></button>
+
             </div>
         </div>
     );
