@@ -1,0 +1,19 @@
+$bigFontSize: 2.4rem;
+$smallFont: 1.4rem;
+$lightColor: #00000040;
+$generalWidth: 70%;
+
+@mixin lightBorders($bRadius) {
+    border: 1px solid $lightColor;
+    border-radius: $bRadius;
+}
+
+@mixin boldText {
+    font-size: $bigFontSize;
+    font-weight: bold;
+}
+
+@mixin lightBorders($bRadius) {
+    border: 1px solid $lightColor;
+    border-radius: $bRadius;
+}
