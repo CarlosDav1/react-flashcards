@@ -12,8 +12,3 @@ $generalWidth: 70%;
     font-size: $bigFontSize;
     font-weight: bold;
 }
-
-@mixin lightBorders($bRadius) {
-    border: 1px solid $lightColor;
-    border-radius: $bRadius;
-}
