@@ -8,44 +8,6 @@
     justify-content: center;
 }
 
-.deckContainer{
-    border: 1px solid $lightColor;
-    width: 13rem;
-    height: 17rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    padding: 2rem;
-    position: relative;
-    
-    &:hover{
-        cursor: pointer;
-    }
-
-    .clickArea{
-        position: absolute;
-        height: 75%;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
-    .buttons{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin: 2rem;
-    }
-
-    .edit{margin: 0 1rem;}
-}
-
-.numberOfCards{
-    color: #00000040;
-    font-style: italic;
-    position: absolute;
-    bottom: 0;
-    margin: 2rem 0;
-}
-
 .newDeckContents{
     text-align: center;
     font-style: italic;

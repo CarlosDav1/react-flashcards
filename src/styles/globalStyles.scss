@@ -1,7 +1,32 @@
-$bigFontSize: 2.4rem;
-$smallFont: 1.4rem;
-$lightColor: #00000040;
+$bigFontSize: 2.25rem;
+$smallFont: 1.125rem;
+$lightColor: #0000001a;
+$textColor: #404040;
 $generalWidth: 70%;
+
+$background: #DAF4FF;
+$gradientPink: #F3C8FF;
+$gradientBlue: #9EE8FF;
+
+$green: #68AA8F;
+$red: #EB806C;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+body{
+    background-color: $background;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: $bigFontSize;
+    color: $textColor;
+}
+
+p{
+    font-size: $smallFont;
+    color: $textColor;
+}
 
 @mixin lightBorders($bRadius) {
     border: 1px solid $lightColor;
