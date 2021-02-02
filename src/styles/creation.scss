@@ -1,34 +1,8 @@
 @import './globalStyles.scss';
 
-@mixin questionAndAnswer{
-    width: 80%;
-    resize: none;
-    text-align: center;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-
-    &:focus{
-        outline: none;
-        &::placeholder{
-            opacity: 0;
-        }
-    }
-}
-
-.cardsContainer, .mainContainer{
+.cardsContainer{
     width: $generalWidth;
     margin: 2.5rem auto;
-}
-
-.mainContainer{
-    border-radius: 20px;
-    position: relative;
-    text-align: center;
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0, 0.25);
-    .buttonsContainer{
-        width: 80%;
-    }
 }
 
 .buttonsContainer{
@@ -47,37 +21,7 @@
     display:block;
 }
 
-.divisionLine {
-    width: 100px;
-    height: 1px;
-    background-color: #0000001a;
-    position: relative;
-    margin: auto;
-}
 
-.question{
-    @include boldText;
-    width: 80%;
-    resize: none;
-    text-align: center;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    height: 3rem;
-    vertical-align: baseline;
-    &:focus{
-        outline: none;
-        &::placeholder{
-            opacity: 0;
-        }
-    }
-    margin: 2rem 0 0;
-}
-
-.answer{
-    font-size: $smallFont;
-    @include questionAndAnswer;
-    margin: 1rem 0 0;
-}
 
 .cardPreview{
     font-size: $smallFont;

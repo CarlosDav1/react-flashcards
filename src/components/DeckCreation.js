@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/creation.css';
-import '../index.css';
+import '../styles/DeckCreation.css';
 import SavingButtons from './SavingButtons'
 import CardsCreated from './CardsCreated'
 import DeckData from './DeckData'

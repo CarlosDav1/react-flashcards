@@ -14,22 +14,9 @@ p {
   color: #404040;
 }
 
-.cardsContainer, .mainContainer {
+.cardsContainer {
   width: 70%;
   margin: 2.5rem auto;
-}
-
-.mainContainer {
-  border-radius: 20px;
-  position: relative;
-  text-align: center;
-  background-color: white;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.mainContainer .buttonsContainer {
-  width: 80%;
 }
 
 .buttonsContainer {
@@ -54,77 +41,6 @@ p {
   height: 3.25rem;
   position: relative;
   display: block;
-}
-
-.divisionLine {
-  width: 100px;
-  height: 1px;
-  background-color: #0000001a;
-  position: relative;
-  margin: auto;
-}
-
-.question {
-  font-size: 2.25rem;
-  font-weight: bold;
-  width: 80%;
-  resize: none;
-  text-align: center;
-  border: none;
-  font-family: 'Roboto', sans-serif;
-  height: 3rem;
-  vertical-align: baseline;
-  margin: 2rem 0 0;
-}
-
-.question:focus {
-  outline: none;
-}
-
-.question:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.question:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.question:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.question:focus::placeholder {
-  opacity: 0;
-}
-
-.answer {
-  font-size: 1.125rem;
-  width: 80%;
-  resize: none;
-  text-align: center;
-  border: none;
-  font-family: 'Roboto', sans-serif;
-  margin: 1rem 0 0;
-}
-
-.answer:focus {
-  outline: none;
-}
-
-.answer:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.answer:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.answer:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.answer:focus::placeholder {
-  opacity: 0;
 }
 
 .cardPreview {
