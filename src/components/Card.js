@@ -26,6 +26,7 @@ function MainComp(props){
     return(
         <>
             <div className="cardContainer" onClick={props.reveal}>
+                <div className="insideDecoration"></div>
                 <h1 className="questionStyle">{props.question}</h1>
                 {props.answer}
             </div>

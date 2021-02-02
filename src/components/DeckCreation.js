@@ -56,7 +56,7 @@ function DeckCreation(){
 
     return(
         <>
-            <div className="mainContainer">{mainComponent}</div>
+            <div className="mainContainer">{mainComponent}<div className="insideDecoration"></div></div>
             <CardsCreated list={cardsArray} deleteCard={deleteCard} editCard={EditCard}/>
         </>
     );

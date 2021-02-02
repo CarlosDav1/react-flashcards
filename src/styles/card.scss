@@ -1,10 +1,17 @@
+@import './globalStyles.scss';
+
+.insideDecoration{
+    @include insideLine;
+}
+
 .cardContainer{
+    @include generalContainer;
     width: 70%;
-    border-radius: 25px;
-    border: 1px solid #00000040;
+    border-radius: 15px;
     position: relative;
     margin: 5rem auto;
     text-align: center;
+    padding: 2rem;
 
     &:hover{
         cursor: pointer;
