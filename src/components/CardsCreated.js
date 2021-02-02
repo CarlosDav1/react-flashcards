@@ -1,6 +1,4 @@
 import React from 'react';
-import '../styles/creation.css';
-import '../index.css';
 import trash from '../icons/delete.png'
 import edit from '../icons/edit.png'
 

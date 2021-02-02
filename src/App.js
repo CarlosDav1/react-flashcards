@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
 import DeckCreation from './components/DeckCreation'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import DeckEdit from './components/DeckEdit'
-
-import './styles/deckComponent.css';
 import Card from './components/Card'
 import DeckDisplay from './components/DeckDisplay'
 

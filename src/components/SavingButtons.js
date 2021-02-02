@@ -1,6 +1,4 @@
 import React from 'react';
-import '../styles/creation.css';
-import '../index.css';
 import { Link } from 'react-router-dom';
 
 function SavingButtons(props){

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/deckComponent.css';
 import OneDeck from './OneDeck'
 import CreateDeck from './CreateDeck'
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/OneDeck.css';
 import { Link } from 'react-router-dom';
 
 function OneDeck(props){

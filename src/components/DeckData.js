@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/creation.css';
-import '../index.css';
 
 function DeckData(props){
     let [name, setName] = useState('');

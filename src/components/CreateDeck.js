@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/deckComponent.css';
 import { Link } from 'react-router-dom';
 import plus from '../icons/plus.png'
 

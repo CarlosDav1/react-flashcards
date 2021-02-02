@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/DeckCreation.css';
 import SavingButtons from './SavingButtons'
 import CardsCreated from './CardsCreated'
 import DeckData from './DeckData'
