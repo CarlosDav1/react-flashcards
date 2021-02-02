@@ -32,7 +32,7 @@ function DeckDisplay(props){
     }
 
     return (
-        <div className="allDecks">
+        <div className="deckDisplay">
             {creatingComponents}
             <CreateDeck />
         </div>

@@ -4,14 +4,16 @@ import plus from '../icons/plus.png'
 
 function CreateDeck(){
     return(
-        <Link to="/create">
             <div className="newDeck deckContainer">
-                <div className="newDeckContents">
-                    <img className="plus" src={plus}></img>
-                    <p>Create New Deck</p>
-                </div>
+                <Link to="/create">
+                    <div className="insideDecoration">
+                        <div className="newDeckContents">
+                            <img className="plus"src={plus}></img>
+                            <p>Create New Deck</p>
+                        </div>
+                    </div>
+                </Link>
             </div>
-        </Link>
     );
 }
 

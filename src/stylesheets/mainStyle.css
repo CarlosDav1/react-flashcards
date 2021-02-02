@@ -1,0 +1,114 @@
+.parentContainer {
+  width: 100%;
+}
+
+.deckDisplay {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.deckDisplay .newDeck img {
+  height: 50px;
+  width: 50px;
+}
+
+.deckDisplay .newDeck .newDeckContents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.deckContainer {
+  width: 300px;
+  min-width: 300px;
+  height: 450px;
+  margin: 2rem;
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: 0 4px 10px #00000021;
+          box-shadow: 0 4px 10px #00000021;
+  border-radius: 15px;
+}
+
+.insideDecoration {
+  position: relative;
+  width: 275px;
+  height: 425px;
+  border: 1px solid #00000021;
+  border-radius: 15px;
+  padding: 3.5rem 2rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.insideDecoration p {
+  margin: 1rem 0;
+  color: black;
+}
+
+.insideDecoration .numberOfCards {
+  color: #00000021;
+  font-style: italic;
+}
+
+.insideDecoration .clickArea {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.insideDecoration .buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 3.5rem 2rem;
+}
+
+.insideDecoration .buttons button {
+  padding: 0.75rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 7px #00000021;
+          box-shadow: 0 4px 7px #00000021;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+.insideDecoration .buttons .edit {
+  margin: 0 15px;
+}
+
+.insideDecoration .buttons .edit a {
+  color: #68AA8F;
+}
+
+.insideDecoration .buttons .delete {
+  color: #EB806C;
+  cursor: pointer;
+}
+/*# sourceMappingURL=mainStyle.css.map */
