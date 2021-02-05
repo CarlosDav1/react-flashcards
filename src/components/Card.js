@@ -14,8 +14,8 @@ function ButtonDiv(props){
     return(
         <>
             <div className="buttonContainer">
-                <button onClick={props.wrong}>X</button>
-                <button onClick={props.correct}>O</button>
+                <button onClick={props.wrong} className="wrong">Wrong</button>
+                <button onClick={props.correct} className="correct">Right</button>
             </div>
         </>
     );
@@ -25,9 +25,10 @@ function MainComp(props){
     return(
         <>
             <div className="cardContainer" onClick={props.reveal}>
-                <div className="insideDecoration"></div>
+                <div className="decoration">
                 <h1 className="questionStyle">{props.question}</h1>
                 {props.answer}
+                </div>
             </div>
 
             {props.buttons}

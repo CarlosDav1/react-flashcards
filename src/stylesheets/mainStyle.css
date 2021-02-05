@@ -1,9 +1,9 @@
 .parentContainer {
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .deckDisplay {
-  width: 90%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,11 +44,22 @@
   min-width: 300px;
   height: 450px;
   margin: 2rem;
+  width: 300px;
+  min-width: 300px;
+  height: 450px;
+  margin: 2rem;
   background-color: white;
-  position: relative;
+  padding: 0.75rem;
+  background-color: white;
   -webkit-box-shadow: 0 4px 10px #00000021;
           box-shadow: 0 4px 10px #00000021;
   border-radius: 15px;
+  position: relative;
+}
+
+.deckContainer:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
 }
 
 .insideDecoration {
@@ -97,6 +108,12 @@
   background-color: #ffffff;
   border-radius: 10px;
   font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.insideDecoration .buttons button:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
 }
 
 .insideDecoration .buttons .edit {
@@ -110,5 +127,66 @@
 .insideDecoration .buttons .delete {
   color: #EB806C;
   cursor: pointer;
+}
+
+.cardContainer {
+  width: 70vw;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 10px #00000021;
+          box-shadow: 0 4px 10px #00000021;
+  border-radius: 15px;
+  position: relative;
+}
+
+.cardContainer .divisionLine {
+  width: 5rem;
+  height: 1px;
+  background-color: #0000001a;
+  margin: 1rem auto;
+}
+
+.cardContainer .decoration {
+  position: relative;
+  border: 1px solid #0000001a;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.buttonContainer {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.buttonContainer button {
+  padding: 0.75rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 7px #00000021;
+          box-shadow: 0 4px 7px #00000021;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 12rem;
+}
+
+.buttonContainer button:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
+}
+
+.buttonContainer .wrong {
+  color: #EB806C;
+}
+
+.buttonContainer .correct {
+  color: #68AA8F;
 }
 /*# sourceMappingURL=mainStyle.css.map */
