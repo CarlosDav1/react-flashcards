@@ -129,6 +129,13 @@
   cursor: pointer;
 }
 
+.divisionLine {
+  width: 5rem;
+  height: 1px;
+  background-color: #0000001a;
+  margin: 1rem auto;
+}
+
 .cardContainer {
   width: 70vw;
   margin: 3rem auto;
@@ -142,18 +149,47 @@
   position: relative;
 }
 
-.cardContainer .divisionLine {
-  width: 5rem;
-  height: 1px;
-  background-color: #0000001a;
-  margin: 1rem auto;
-}
-
 .cardContainer .decoration {
   position: relative;
   border: 1px solid #0000001a;
   border-radius: 15px;
   padding: 2rem;
+}
+
+.cardContainer .endingCard {
+  border: 1px solid #0000001a;
+  border-radius: 15px;
+  padding: 5rem;
+  text-align: left;
+}
+
+.cardContainer .endingCard .p {
+  margin: 1rem 0;
+}
+
+.cardContainer .endingCard .leftButton {
+  margin-right: 1rem;
+  color: #68AA8F;
+}
+
+.cardContainer .endingCard .rightButton {
+  color: #EB806C;
+}
+
+.cardContainer .endingCard button {
+  padding: 0.75rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 7px #00000021;
+          box-shadow: 0 4px 7px #00000021;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.cardContainer .endingCard button:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
 }
 
 .buttonContainer {
@@ -188,5 +224,60 @@
 
 .buttonContainer .correct {
   color: #68AA8F;
+}
+
+.form {
+  background-color: white;
+  -webkit-box-shadow: 0 4px 10px #00000021;
+          box-shadow: 0 4px 10px #00000021;
+  border-radius: 15px;
+  position: relative;
+  margin: 3rem 0;
+  padding: 0.5rem;
+}
+
+.form textarea {
+  resize: none;
+  width: 100%;
+  outline: none;
+  text-align: center;
+  margin: 0 auto;
+  border: none;
+}
+
+.form .decoration {
+  border: 1px solid #0000001a;
+  border-radius: 15px;
+  padding: 3rem;
+}
+
+.form .decoration .question {
+  font-size: 2.25rem;
+  font-weight: bold;
+  height: 2.7rem;
+}
+
+.form .decoration .answer {
+  font-size: 1.25rem;
+}
+
+.form button {
+  position: relative;
+  right: -100%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  padding: 0.75rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 7px #00000021;
+          box-shadow: 0 4px 7px #00000021;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.form button:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
 }
 /*# sourceMappingURL=mainStyle.css.map */

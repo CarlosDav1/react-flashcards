@@ -119,6 +119,13 @@
     }
 }
 
+.divisionLine{
+    width: 5rem;
+    height: 1px;
+    background-color: #0000001a;
+    margin: 1rem auto;
+}
+
 .cardContainer{
     width: 70vw;
     margin: 3rem auto;
@@ -127,18 +134,35 @@
     cursor: pointer;
     @include cardStyle();
 
-    .divisionLine{
-        width: 5rem;
-        height: 1px;
-        background-color: #0000001a;
-        margin: 1rem auto;
-    }
-
     .decoration{
         position: relative;
         border: 1px solid #0000001a;
         border-radius: 15px;
         padding: 2rem;
+    }
+
+    .endingCard{
+        border: 1px solid #0000001a;
+        border-radius: 15px;
+        padding: 5rem;
+        text-align: left;
+
+        .p{
+            margin: 1rem 0 ;
+        }
+
+        .leftButton{
+            margin-right: 1rem; 
+            color: #68AA8F;
+        }
+
+        .rightButton{
+            color: #EB806C;
+        }
+
+        button{
+            @include buttonStyle();
+        }
     }
 }
 
@@ -158,5 +182,43 @@
 
     .correct{
         color: #68AA8F;
+    }
+}
+
+.form{
+    @include cardStyle();
+    margin: 3rem 0;
+    padding: 0.5rem;
+
+    textarea{
+        resize: none;
+        width: 100%;
+        outline: none;
+        text-align: center;
+        margin: 0 auto;
+        border: none;
+    }
+
+    .decoration{
+        border: 1px solid #0000001a;
+        border-radius: 15px;
+        padding: 3rem;
+
+        .question{
+            font-size: 2.25rem;
+            font-weight: bold;
+            height: 2.7rem;
+        }
+
+        .answer{
+            font-size: 1.25rem;
+        }
+    }
+
+    button{
+        position: relative;
+        right: -100%;
+        transform: translate(-100%, 25%);
+        @include buttonStyle();
     }
 }

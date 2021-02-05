@@ -14,20 +14,22 @@ function CardForm(props){
     }, props.actualCard);
 
     return(
-        <div className="mainContainer">
-            <textarea className="question" placeholder="Question" value={question} onChange={handleInputQuestion}></textarea>
-            <div className="divisionLine"></div>
-            <textarea className="answer" placeholder="Answer" value={answer} onChange={handleInputAnswer}></textarea>
-            <button onClick={() => { 
-            
-            if(question.length == 0 || answer.length == 0) {alert("The values cannot be empty");}
-            else{
-                props.create([question, answer])
-                questionValue('');
-                answerValue('');
-            }
+        <div className="form">
+            <div className="decoration">
+                <textarea className="question" placeholder="Question" value={question} onChange={handleInputQuestion}></textarea>
+                <div className="divisionLine"></div>
+                <textarea className="answer" placeholder="Answer" value={answer} onChange={handleInputAnswer}></textarea>
+                <button onClick={() => { 
+                
+                if(question.length == 0 || answer.length == 0) {alert("The values cannot be empty");}
+                else{
+                    props.create([question, answer])
+                    questionValue('');
+                    answerValue('');
+                }
 
-            }}>Add Card</button>
+                }}>Add Card</button>
+            </div>
         </div>
     );
 }

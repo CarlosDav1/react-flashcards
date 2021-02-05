@@ -12,12 +12,10 @@ function Answer(props){
 
 function ButtonDiv(props){
     return(
-        <>
-            <div className="buttonContainer">
-                <button onClick={props.wrong} className="wrong">Wrong</button>
-                <button onClick={props.correct} className="correct">Right</button>
-            </div>
-        </>
+        <div className="buttonContainer">
+            <button onClick={props.wrong} className="wrong">Wrong</button>
+            <button onClick={props.correct} className="correct">Right</button>
+        </div>
     );
 }
 
@@ -38,12 +36,14 @@ function MainComp(props){
 
 function GoBack(props){
     return(
-        <>
-            <h1>Congratulations! You Finished the deck</h1>
-            <p>Do you want to retry or do you want to go back?</p>
-            <button onClick={props.retry}>Retry</button>
-            <Link to="/"><button onClick={props.finish}>Go Back</button></Link>
-        </>
+        <div className="cardContainer">  
+            <div className="endingCard">
+                <h1>Congratulations! You Finished the deck</h1>
+                <p className="p">Do you want to retry or do you want to go back?</p>
+                <button onClick={props.retry} className="leftButton">Retry</button>
+                <Link to="/"><button onClick={props.finish} className="rightButton">Go Back</button></Link>
+            </div>
+        </ div>
     );
 }
 
