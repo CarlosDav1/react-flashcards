@@ -150,10 +150,20 @@
 }
 
 .cardContainer .decoration {
-  position: relative;
   border: 1px solid #0000001a;
   border-radius: 15px;
   padding: 2rem;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cardContainer .endingCard {
@@ -249,12 +259,12 @@
   border: 1px solid #0000001a;
   border-radius: 15px;
   padding: 3rem;
+  overflow: auto;
 }
 
 .form .decoration .question {
   font-size: 2.25rem;
   font-weight: bold;
-  height: 2.7rem;
 }
 
 .form .decoration .answer {
@@ -263,9 +273,8 @@
 
 .form button {
   position: relative;
-  right: -100%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
+  float: right;
+  margin: 0 0.5rem;
   padding: 0.75rem;
   border: none;
   -webkit-box-shadow: 0 4px 7px #00000021;
@@ -279,5 +288,91 @@
 .form button:hover {
   -webkit-box-shadow: 0 4px 10px #F3C8FF;
           box-shadow: 0 4px 10px #F3C8FF;
+}
+
+.cardPreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1.25rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 10px #00000021;
+          box-shadow: 0 4px 10px #00000021;
+  border-radius: 15px;
+  position: relative;
+}
+
+.cardPreview button {
+  padding: 0.75rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 7px #00000021;
+          box-shadow: 0 4px 7px #00000021;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 0.25rem;
+}
+
+.cardPreview button:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
+}
+
+.bContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.redB {
+  color: #EB806C;
+  padding: 0.75rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 7px #00000021;
+          box-shadow: 0 4px 7px #00000021;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 0.25rem;
+}
+
+.redB:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
+}
+
+.greenB {
+  color: #68AA8F;
+  padding: 0.75rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 7px #00000021;
+          box-shadow: 0 4px 7px #00000021;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 0.25rem;
+}
+
+.greenB:hover {
+  -webkit-box-shadow: 0 4px 10px #F3C8FF;
+          box-shadow: 0 4px 10px #F3C8FF;
+}
+
+.greenColor {
+  color: #68AA8F;
 }
 /*# sourceMappingURL=mainStyle.css.map */

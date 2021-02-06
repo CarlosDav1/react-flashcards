@@ -8,14 +8,17 @@ function DeckData(props){
     let handleDeckDescription = event => setDescription(event.target.value);
 
     return(
-        <>
-            <textarea className="question" placeholder="Deck name" value={name} onChange={handleDeckName}></textarea>
-            <div className="divisionLine"></div>
-            <textarea className="answer" placeholder="Deck description" value={description} onChange={handleDeckDescription}></textarea>
+        <>  
+            <div className="form">
+                <div className="decoration">
+                    <textarea className="question" placeholder="Deck name" value={name} onChange={handleDeckName}></textarea>
+                    <div className="divisionLine"></div>
+                    <textarea className="answer" placeholder="Deck description" value={description} onChange={handleDeckDescription}></textarea>
+                </div>
+            </div>
 
-            <div className="buttonsContainer">
-                <div></div>
-                <button  onClick={() => {
+            <div className="bContainer">
+                <button className="greenB" onClick={() => {
 
                     if(name.length == 0 || description.length == 0) {alert("The values cannot be empty");}
                     else{props.setNandD([name, description])}

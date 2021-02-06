@@ -15,12 +15,14 @@ function DeckCreation(){
     let mainComponent = nameAndDescription.length == 0?
     <DeckData setNandD={setNandD}/>:
 
-    <>
-        <textarea className="question" placeholder="Question" value={question} onChange={handleInputQuestion}></textarea>
-        <div className="divisionLine"></div>
-        <textarea className="answer" placeholder="Answer" value={answer} onChange={handleInputAnswer}></textarea>
-        <SavingButtons question={question} answer={answer} createCard={createCard} saveDeck={saveDeck}/>
-    </> 
+    <div className="form">
+        <div className="decoration">
+            <textarea className="question" placeholder="Question" value={question} onChange={handleInputQuestion}></textarea>
+            <div className="divisionLine"></div>
+            <textarea className="answer" placeholder="Answer" value={answer} onChange={handleInputAnswer}></textarea>
+            <SavingButtons question={question} answer={answer} createCard={createCard} saveDeck={saveDeck}/>
+        </div>
+    </div> 
 
     function createCard(props){
         cardsArray.unshift(props);
@@ -55,7 +57,7 @@ function DeckCreation(){
 
     return(
         <>
-            <div className="mainContainer">{mainComponent}<div className="insideDecoration"></div></div>
+            <div className="mainContainer">{mainComponent}</div>
             <CardsCreated list={cardsArray} deleteCard={deleteCard} editCard={EditCard}/>
         </>
     );
