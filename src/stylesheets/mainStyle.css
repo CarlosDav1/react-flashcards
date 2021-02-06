@@ -58,8 +58,8 @@
 }
 
 .deckContainer:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .insideDecoration {
@@ -112,8 +112,8 @@
 }
 
 .insideDecoration .buttons button:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .insideDecoration .buttons .edit {
@@ -198,8 +198,8 @@
 }
 
 .cardContainer .endingCard button:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .buttonContainer {
@@ -224,8 +224,8 @@
 }
 
 .buttonContainer button:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .buttonContainer .wrong {
@@ -286,8 +286,8 @@
 }
 
 .form button:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .cardPreview {
@@ -323,8 +323,8 @@
 }
 
 .cardPreview button:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .bContainer {
@@ -350,8 +350,8 @@
 }
 
 .redB:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .greenB {
@@ -368,8 +368,8 @@
 }
 
 .greenB:hover {
-  -webkit-box-shadow: 0 4px 10px #F3C8FF;
-          box-shadow: 0 4px 10px #F3C8FF;
+  -webkit-box-shadow: 0 4px 10px #DAF4FF;
+          box-shadow: 0 4px 10px #DAF4FF;
 }
 
 .greenColor {
