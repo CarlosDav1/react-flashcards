@@ -70,7 +70,7 @@ function DeckEdit(props){
             <CardForm create={createCard} actualCard={cardToEdit}/>
             <CardsCreated list={deckEdit} deleteCard={deleteCard} editCard={EditCard}/>
 
-            <div>
+            <div className="buttonContainer">
                 <Link to="/"><button onClick={() => props.goBack(null)} className="redB">Discard Changes</button></Link>
                 <Link to="/" onClick={() => {saveDeck(props.index); props.goBack(null);}}><button className="greenB">Save</button></Link>
             </div>

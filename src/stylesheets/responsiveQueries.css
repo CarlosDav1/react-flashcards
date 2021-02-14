@@ -1,0 +1,49 @@
+@media screen and (max-width: 1080px) {
+  .parentContainer {
+    width: 100%;
+  }
+  .parentContainer .form, .parentContainer .cardsContainer, .parentContainer .bContainer {
+    width: 90%;
+    position: relative;
+    right: -50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardContainer {
+    width: 90vw;
+  }
+  .cardContainer .endingCard {
+    padding: 3rem;
+    text-align: center;
+  }
+  .cardPreview {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cardPreview p {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .buttonContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    vertical-align: middle;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .buttonContainer .wrong, .buttonContainer .correct {
+    width: 90%;
+    margin: 0.5rem;
+  }
+}
+/*# sourceMappingURL=responsiveQueries.css.map */

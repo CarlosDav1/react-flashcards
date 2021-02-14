@@ -1,0 +1,44 @@
+@media screen and (max-width: 1080px){
+    .parentContainer{
+        width: 100%;
+        .form, .cardsContainer, .bContainer{
+            width: 90%;
+            position: relative;
+            right: -50%;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .cardContainer{
+        width: 90vw;
+        
+        .endingCard{
+            padding: 3rem;
+            text-align: center;
+        }
+    }
+    
+    .cardPreview{
+        flex-direction: column;
+        p{
+            margin: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .buttonContainer{
+        flex-direction: column-reverse;
+        vertical-align: middle;
+        align-items: center;
+
+        .wrong, .correct{
+            width: 90%;
+            margin: 0.5rem;
+        }
+    }
+
+    
+}

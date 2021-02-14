@@ -1,3 +1,5 @@
+
+
 @mixin cardStyle{
     background-color: white;
     box-shadow: 0 4px 10px #00000021;
@@ -155,7 +157,8 @@
         }
 
         .leftButton{
-            margin-right: 1rem; 
+            margin: 1rem; 
+            margin-left: 0;
             color: #68AA8F;
         }
 
@@ -261,3 +264,5 @@
 .greenColor{
     color: #68AA8F;
 }
+
+@import './responsiveQueries.scss';

@@ -38,7 +38,7 @@ function GoBack(props){
     return(
         <div className="cardContainer">  
             <div className="endingCard">
-                <h1>Congratulations! You Finished the deck</h1>
+                <h1>You Finished the deck!</h1>
                 <p className="p">Do you want to retry or do you want to go back?</p>
                 <button onClick={props.retry} className="leftButton">Retry</button>
                 <Link to="/"><button onClick={props.finish} className="rightButton">Go Back</button></Link>
